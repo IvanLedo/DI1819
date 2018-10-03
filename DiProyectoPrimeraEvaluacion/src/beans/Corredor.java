@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author MSI
  */
-public class Corredor implements Comparable<Corredor>{
+public class Corredor implements Comparable<Corredor> {
 
     SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yy");
     private String nombre;
@@ -29,7 +29,6 @@ public class Corredor implements Comparable<Corredor>{
         this.dni = dni;
     }
 
-    
     public Corredor(String nombre, String dni, Date fechaDeNacimiento, String direccion, String telefono) {
         this.nombre = nombre;
         this.dni = dni;
@@ -70,8 +69,6 @@ public class Corredor implements Comparable<Corredor>{
         this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
-    
-
     public String getDireccion() {
         return direccion;
     }
@@ -95,12 +92,11 @@ public class Corredor implements Comparable<Corredor>{
 
     @Override
     public int compareTo(Corredor o) {
-        int resultado=0;
-        if(this.dni.equals(o.dni)){
+        int resultado = 0;
+        if (this.dni.equals(o.dni)) {
             resultado = 1;
         }
         return resultado;
     }
 
 }
-
